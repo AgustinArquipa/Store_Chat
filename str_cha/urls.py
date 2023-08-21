@@ -3,5 +3,5 @@ from str_cha import views
 
 #urls de la app
 urlpatterns = [
-    path('', views.index, name='index')
+    path('', views.productIndex , name='index')
 ]

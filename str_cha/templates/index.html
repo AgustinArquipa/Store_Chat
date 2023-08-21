@@ -1,17 +1,20 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block page_content %}
-<h1>Portfolio</h1>
+<div class="container-md">
+    <h1>Productos</h1>
+</div>
 <div class="row">
-    {% for proyecto in proyectos %}
-    <div class="col-md-4">
+    {% for producto in productos %}
+    <div class="col-md-3">
         <div class="card mb-2">
-        <img class="card-img-top" src="{% static proyecto.imagen%}">
+        <img class="card-img-top" src="{{ producto.img.url }}">
          <div class="card-body">
-            <h5 class="card-title">{{ proyecto.titulo }}</h5>
-            <p class="card-text">{{ proyecto.descripcion }}</p>
-            <a href="{% url 'projectDetail' proyecto.pk %}" class="btn btn-primary">
-                Leer mas
+            <h5 class="card-title">{{ producto.titulo }}</h5>
+            <p class="card-text">{{ producto.descripcion }}</p>
+            <a href="" class="btn btn-success">Añadir al Carrito</a>
+            <a href="" class="btn btn-info">
+                Comprar
             </a>
         </div>
     </div>
